@@ -58,9 +58,9 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       children: [
         buildLeftPane(context),
         const VerticalDivider(width: 1),
-        Expanded(
-          child: buildRightPane(context),
-        ),
+        // Expanded(
+        //   child: buildRightPane(context),
+        // ),
       ],
     );
   }
@@ -81,17 +81,17 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                 buildTip(context),
                 buildIDBoard(context),
                 buildPasswordBoard(context),
-                FutureBuilder<Widget>(
-                  future: buildHelpCards(),
-                  builder: (_, data) {
-                    if (data.hasData) {
-                      return data.data!;
-                    } else {
-                      return const Offstage();
-                    }
-                  },
-                ),
-                buildPluginEntry()
+                // FutureBuilder<Widget>(
+                //   future: buildHelpCards(),
+                //   builder: (_, data) {
+                //     if (data.hasData) {
+                //       return data.data!;
+                //     } else {
+                //       return const Offstage();
+                //     }
+                //   },
+                // ),
+                // buildPluginEntry()
               ],
             ),
           ),
@@ -103,7 +103,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
   buildRightPane(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      child: ConnectionPage(),
+      // child: ConnectionPage(),
     );
   }
 
