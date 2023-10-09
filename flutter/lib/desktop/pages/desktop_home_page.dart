@@ -57,7 +57,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         buildLeftPane(context),
-        const VerticalDivider(width: 1),
+        // const VerticalDivider(width: 1),
         // Expanded(
         //   child: buildRightPane(context),
         // ),
@@ -69,7 +69,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
     return ChangeNotifierProvider.value(
       value: gFFI.serverModel,
       child: Container(
-        width: 200,
+        width: 300,
         color: Theme.of(context).colorScheme.background,
         child: DesktopScrollWrapper(
           scrollController: _leftPaneScrollController,
@@ -142,7 +142,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                                   ?.color
                                   ?.withOpacity(0.5)),
                         ).marginOnly(top: 5),
-                        buildPopupMenu(context)
+                        // buildPopupMenu(context)
                       ],
                     ),
                   ),
@@ -267,20 +267,20 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                             )),
                         onHover: (value) => refreshHover.value = value,
                       ).marginOnly(right: 8, top: 4),
-                      InkWell(
-                        child: Obx(
-                          () => Tooltip(
-                            message: translate('Change Password'),
-                            child: Icon(
-                              Icons.edit,
-                              color:
-                                  editHover.value ? textColor : Color(0xFFDDDDDD),
-                              size: 22,
-                            )).marginOnly(right: 8, top: 4),
-                        ),
-                        onTap: () => DesktopSettingPage.switch2page(1),
-                        onHover: (value) => editHover.value = value,
-                      ),
+                      // InkWell(
+                      //   child: Obx(
+                      //     () => Tooltip(
+                      //       message: translate('Change Password'),
+                      //       child: Icon(
+                      //         Icons.edit,
+                      //         color:
+                      //             editHover.value ? textColor : Color(0xFFDDDDDD),
+                      //         size: 22,
+                      //       )).marginOnly(right: 8, top: 4),
+                      //   ),
+                      //   onTap: () => DesktopSettingPage.switch2page(1),
+                      //   onHover: (value) => editHover.value = value,
+                      // ),
                     ],
                   ),
                 ],
