@@ -21,15 +21,15 @@ class DesktopTabPage extends StatefulWidget {
   static void onAddSetting({int initialPage = 0}) {
     try {
       DesktopTabController tabController = Get.find();
-      tabController.add(TabInfo(
-          key: kTabLabelSettingPage,
-          label: kTabLabelSettingPage,
-          selectedIcon: Icons.build_sharp,
-          unselectedIcon: Icons.build_outlined,
-          page: DesktopSettingPage(
-            key: const ValueKey(kTabLabelSettingPage),
-            initialPage: initialPage,
-          )));
+      // tabController.add(TabInfo(
+      //     key: kTabLabelSettingPage,
+      //     label: kTabLabelSettingPage,
+      //     selectedIcon: Icons.build_sharp,
+      //     unselectedIcon: Icons.build_outlined,
+      //     page: DesktopSettingPage(
+      //       key: const ValueKey(kTabLabelSettingPage),
+      //       initialPage: initialPage,
+      //     )));
     } catch (e) {
       debugPrintStack(label: '$e');
     }
